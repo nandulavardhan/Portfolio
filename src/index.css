@@ -1,0 +1,172 @@
+/* ── Google Font — must be first (PostCSS rule) ──────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Palette CSS vars ────────────────────────────────────────────────────── */
+:root {
+  --vbase: #14131B;
+  /* Deep dark background */
+  --vpanel: #14131B;
+  /* Subpanels usually match or slightly off #1E1C27 */
+  --vtext: #FAFAFF;
+  /* Ghost white/Lavender */
+  --vaccent: #E8A87C;
+  /* Peach/Orange */
+  --vmuted: #757B8C;
+  /* Slate grey */
+  --vturquoise: #2ED4B5;
+  /* Turquoise */
+
+}
+
+/* ── Base resets ─────────────────────────────────────────────────────────── */
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html,
+  body,
+  #root {
+    height: 100dvh;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  body {
+    background-color: var(--vbase);
+    color: var(--vtext);
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: rgba(232, 168, 124, 0.25);
+    color: var(--vaccent);
+  }
+
+  /* Thin scrollbar */
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--vmuted);
+    border-radius: 9999px;
+  }
+}
+
+/* ── Component layout ────────────────────────────────────────────────────── */
+@layer components {
+
+  /* Blur canvas behind terminal if we wanted an image, just dark for now */
+  .terminal-root {
+    position: fixed;
+    inset: 0;
+    background-color: var(--vbase);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Optional blurred BG image if wanted, sticking to pure deep dark for now */
+  }
+
+  /* Centered terminal window - MAC OS style */
+  .terminal-window {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: var(--vbase);
+    overflow: hidden;
+  }
+
+  @media (min-width: 640px) {
+    .terminal-window {
+      width: min(96vw, 1040px);
+      height: min(93vh, 820px);
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  /* Scrollable output */
+  .terminal-output {
+    overflow-y: auto;
+    padding: 1rem;
+    flex: 1 1 0%;
+    min-height: 0;
+    -webkit-user-select: text;
+    user-select: text;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  @media (min-width: 640px) {
+    .terminal-output {
+      padding: 1.5rem;
+    }
+  }
+}
+
+/* ── Sidebar responsive visibility ───────────────────────────────────────── */
+.terminal-sidebar {
+  display: none;
+  flex-shrink: 0;
+  flex-direction: column;
+  width: 14rem;
+  border-left: 1px dashed rgba(255, 255, 255, 0.12);
+}
+
+@media (min-width: 768px) {
+  .terminal-sidebar {
+    display: flex;
+  }
+}
+
+/* ── Cursor blink ────────────────────────────────────────────────────────── */
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+/* ── Utilities ───────────────────────────────────────────────────────────── */
+@layer utilities {
+  .dashed-border {
+    border: 1px dashed rgba(255, 255, 255, 0.12);
+  }
+
+  .dashed-border-b {
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.12);
+  }
+
+  .dashed-border-t {
+    border-top: 1px dashed rgba(255, 255, 255, 0.12);
+  }
+
+  .dashed-border-l {
+    border-left: 1px dashed rgba(255, 255, 255, 0.12);
+  }
+
+  .dashed-border-r {
+    border-right: 1px dashed rgba(255, 255, 255, 0.12);
+  }
+}
