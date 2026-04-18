@@ -26,4 +26,12 @@ export const LOGS_DATA = [
       "Learned a lot about app development and working in a team and how to handle the pressure of a hackathon."
     ]
   },
+  {
+    id: "2026-01",
+    month: "January 2026",
+    aliases: ["01", "1", "january", "jan", "2026-01"],
+    content: [
+      "Started using Antigravity for coding."
+    ]
+  },
 ]

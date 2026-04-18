@@ -5,19 +5,19 @@ export const ENGAGEMENTS_DATA = {
       months: [
         {
           month: 'April',
-          items: ['Interstellar (2014)', 'The Matrix (1999)'],
+          items: ['Interstellar (2014)', 'Better Call Saul Season 1'],
         },
         {
           month: 'March',
-          items: ['Inception (2010)', 'Dune: Part Two (2024)'],
+          items: ['Inception (2010)', 'El-Camino (2019)'],
         },
         {
           month: 'February',
-          items: ['Inception (2010)', 'Dune: Part Two (2024)'],
+          items: ['Pyaasa (1957)', 'Breaking Bad Season 4 and 5'],
         },
         {
           month: 'January',
-          items: ['Inception (2010)', 'Dune: Part Two (2024)'],
+          items: ['Inception (2010)', 'Breaking Bad Season 3'],
         },
       ],
     },
@@ -26,7 +26,7 @@ export const ENGAGEMENTS_DATA = {
       months: [
         {
           month: 'December',
-          items: ['Interstellar (2014)', 'The Matrix (1999)', 'Breaking Bad Season 2-3'],
+          items: ['Whiplash (2014)', '', 'Breaking Bad Season 2'],
         },
         {
           month: 'November',
@@ -34,43 +34,19 @@ export const ENGAGEMENTS_DATA = {
         },
         {
           month: 'October',
-          items: ['Inception (2010)', 'Dune: Part Two (2024)', 'Breaking Bad Season 1'],
+          items: ['Interstellar (2014)'],
         },
         {
           month: 'September',
-          items: ['Inception (2010)', 'Dune: Part Two (2024)', 'Breaking Bad Season 1'],
+          items: [' (2010)'],
         },
         {
           month: 'August',
-          items: ['Inception (2010)', 'Dune: Part Two (2024)', 'Breaking Bad Season 1'],
+          items: ['Rockstar(2011)'],
         },
         {
           month: 'July',
-          items: ['Inception (2010)', 'Dune: Part Two (2024)', 'Breaking Bad Season 1'],
-        },
-        {
-          month: 'June',
-          items: ['Inception (2010)', 'Dune: Part Two (2024)', 'Breaking Bad Season 1'],
-        },
-        {
-          month: 'May',
-          items: ['Inception (2010)', 'Dune: Part Two (2024)', 'Breaking Bad Season 1'],
-        },
-        {
-          month: 'April',
-          items: ['Inception (2010)', 'Dune: Part Two (2024)', 'Breaking Bad Season 1'],
-        },
-        {
-          month: 'March',
-          items: ['Inception (2010)', 'Dune: Part Two (2024)', 'Breaking Bad Season 1'],
-        },
-        {
-          month: 'February',
-          items: ['Inception (2010)', 'Dune: Part Two (2024)', 'Breaking Bad Season 1'],
-        },
-        {
-          month: 'January',
-          items: ['Inception (2010)', 'Dune: Part Two (2024)', 'Breaking Bad Season 1'],
+          items: ['Photograph (2019)'],
         },
       ],
     },
@@ -126,30 +102,6 @@ export const ENGAGEMENTS_DATA = {
         },
         {
           month: 'July',
-          items: ['The Pragmatic Programmer'],
-        },
-        {
-          month: 'June',
-          items: ['Atomic Habits — James Clear', 'Deep Work — Cal Newport'],
-        },
-        {
-          month: 'May',
-          items: ['The Pragmatic Programmer'],
-        },
-        {
-          month: 'April',
-          items: ['Atomic Habits — James Clear', 'Deep Work — Cal Newport'],
-        },
-        {
-          month: 'March',
-          items: ['The Pragmatic Programmer'],
-        },
-        {
-          month: 'February',
-          items: ['Atomic Habits — James Clear', 'Deep Work — Cal Newport'],
-        },
-        {
-          month: 'January',
           items: ['The Pragmatic Programmer'],
         },
       ],
